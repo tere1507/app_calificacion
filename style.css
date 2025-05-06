@@ -1,0 +1,32 @@
+
+body {
+    background-color: rgb(236, 202, 208); 
+    font-family: Arial, sans-serif; 
+    margin: 20px; }
+
+.producto { 
+    border: 1px solid #ccc; 
+    padding: 10px; margin: 5px 0; 
+    border-radius: 8px; }
+
+.estrellas { 
+    color: gold; 
+    font-size: 1.2em; }
+div {
+    background-color: pink;
+}
+h1  {
+    color: purple;
+    font-weight: bold;
+}
+
+
+legend{
+    color: purple;
+    font-weight: bold;
+}
+
+button{
+    background-color: blueviolet;
+    color: aliceblue;
+}
