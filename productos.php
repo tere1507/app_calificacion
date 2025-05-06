@@ -19,7 +19,10 @@ function filtrarProductos($productos, $filtro) {//
         return $productos;
     }
     // Devolvemos solo los productos cuya estrella esté en el filtro
-return array_filter($productos, function($producto) use ($filtro) {
+return array_filter($productos, function($producto) use ($filtro) {//array_filter() itera internamente sobre cada elemento del 
+    //primer array que recibe ($productos). Por cada elemento, llama a la función callback (el segundo argumento)
+    //Si la función callback devuelve true para un elemento, array_filter() incluye ese elemento en el nuevo array que está construyendo. Si devuelve false, lo descarta.
+
     return in_array($producto['estrellas'], $filtro);
 });
 
@@ -47,7 +50,7 @@ $productosFiltrados = filtrarProductos($productos, $filtro);
            <label>
            <input type="checkbox" name="estrellas[]" value="<?= $i ?>"
             <?= in_array($i, $filtro) ? 'checked' : ''?>>
-            <?= str_repeat("⭐", $i) ?>
+            <?= str_repeat("⭐", $i) ?><!--Genera y muestra el número correcto de emojis de estrella ("⭐", "⭐⭐", etc.) según el valor actual de $i-->
            </label>
         <br>
         <?php endfor; ?>
